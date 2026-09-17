@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.DS_Store
+test-results/
+playwright-report/
+.env.local
+.tools/
+.asset-work/
+
+# Original references and local QA screenshots are not needed for hosting.
+reference/
+docs/screenshots/
+dist-hosted/
+.env.*.local
+release/
