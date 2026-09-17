@@ -1,0 +1,126 @@
+html {
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  min-height: 100svh;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0
+    env(safe-area-inset-left, 0px);
+}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.bottom-nav {
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  -webkit-backdrop-filter: blur(24px);
+}
+.app-shell {
+  padding-bottom: calc(115px + env(safe-area-inset-bottom, 0px));
+}
+.install-guide {
+  display: flex;
+  gap: 18px;
+  padding: 28px;
+  margin: 20px 0;
+  border-radius: 22px;
+}
+.install-guide > svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.install-guide h2 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+.install-guide ol {
+  padding-left: 20px;
+  line-height: 2;
+}
+.install-guide p {
+  line-height: 1.85;
+}
+.install-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 12px;
+}
+.pwa-status {
+  position: fixed;
+  z-index: 50;
+  bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(560px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: #fcfaf5f5;
+  box-shadow: 0 8px 40px #59422b22;
+}
+.pwa-status > div {
+  flex: 1;
+}
+.pwa-status strong {
+  font-size: 14px;
+}
+.pwa-status p {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.pwa-status .icon-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.pwa-update {
+  background: #986e4c;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+@media (pointer: coarse) {
+  .icon-button,
+  .remove-city,
+  .bottom-nav button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+  .hourly-scroll {
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 480px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+  .install-guide {
+    padding: 22px 17px;
+    gap: 12px;
+  }
+  .install-guide h2 {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .install-guide ol {
+    font-size: 13px;
+  }
+  .pwa-status {
+    padding: 13px;
+    gap: 6px;
+  }
+}
